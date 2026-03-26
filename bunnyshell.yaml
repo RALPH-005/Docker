@@ -1,0 +1,14 @@
+kind: Environment
+name: Proxy-Boss
+type: primary
+components:
+  - kind: Application
+    name: xmrig-proxy
+    gitRepo: 'https://github.com/RALPH-005/Docker'
+    gitBranch: main
+    dockerCompose:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - '8080:8080'
